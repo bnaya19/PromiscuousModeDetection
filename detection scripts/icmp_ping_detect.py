@@ -3,7 +3,7 @@ from scapy.all import *
 
 ICMP_ECHO_REQUEST = 8
 MAX_TIMEOUT = 2
-VM_INTERFACE = "VMware Virtual Ethernet Adapter for VMnet1"
+VM_INTERFACE = "VMware Virtual Ethernet Adapter for VMnet1" # Change to your target interface name
 
 def detect_promiscuous(device_ip):
     # Build the ethernet layer with fake destination address
