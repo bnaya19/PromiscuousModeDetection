@@ -2,7 +2,7 @@ import sys
 from scapy.all import *
 
 MAX_TIMEOUT = 2
-VM_INTERFACE = "VMware Virtual Ethernet Adapter for VMnet1"
+VM_INTERFACE = "VMware Virtual Ethernet Adapter for VMnet1" # Change to your interface name
 
 
 def detect_promiscuous(device_ip):
