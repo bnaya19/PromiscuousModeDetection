@@ -13,9 +13,8 @@ from matplotlib.ticker import MaxNLocator
 
 ICMP_ECHO_REQUEST = 8
 MAX_TIMEOUT = 2
-# VMWARE_IFACE = "Realtek PCIe FE Family Controller" # Your inteface name
-VMWARE_IFACE =  "VMware Virtual Ethernet Adapter for VMnet1"
-#SRC_IP = "169.254.57.226" # Your inteface IP
+VMWARE_IFACE = "" # Your inteface name
+SRC_IP = "" # Your inteface IP
 OUTPUT_FIG_NAME = "output.png"
 INITIAL_TRASH_AMOUNT = 500
 PERIODIC_TRASH_AMOUNT = 100
@@ -34,7 +33,7 @@ def bomb_network(device_ip, amount):
 
 def build_icmp_echo_rquest(target_ip):
 	request_packet = Ether(dst="ff:ff:ff:ff:ff:ff")
-	request_packet /= IP( dst=target_ip) #src=SRC_IP,
+	request_packet /= IP(src=SRC_IP, dst=target_ip)
 	request_packet /= ICMP(type=ICMP_ECHO_REQUEST)
 	return request_packet
 
