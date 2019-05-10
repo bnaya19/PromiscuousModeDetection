@@ -2,7 +2,7 @@ from scapy.all import *
 from random import randint
 
 MAX_TIMEOUT = 5
-VM_INTERFACE = "VMware Virtual Ethernet Adapter for VMnet1"
+VM_INTERFACE = "VMware Virtual Ethernet Adapter for VMnet1" # Change to your target interface name
 FAKE_MAC = "aa:bb:cc:dd:ee:ff"
 PTR_QUERY_TYPE = 12 
 
