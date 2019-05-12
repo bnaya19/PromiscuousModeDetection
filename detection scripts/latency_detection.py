@@ -1,6 +1,3 @@
-"""
-	This is the single-threaded version of the latency detection script. 
-"""
 import time
 import sys
 import threading
